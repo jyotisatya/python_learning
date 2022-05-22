@@ -1,0 +1,10 @@
+#list is mutable
+
+spam= 'hey hello'
+# spam[0]= 'x' # string are immutable. We can't change the string
+# print(spam)
+
+# We can change the string by slicing
+
+newspam= spam[0:2] + 'is' + spam[3:5]
+print(newspam)
