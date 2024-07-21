@@ -1,0 +1,4 @@
+setuptools
+# Add other dependencies here, e.g.:
+# requests==2.28.0
+# numpy>=1.23.0
