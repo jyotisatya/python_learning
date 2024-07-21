@@ -33,6 +33,6 @@ pip install -e .
 #now you can import directly all the module
 # to run a file
 
-python -m {path to your file}.py
+python -m Learning.arrays_dictionaries.string_word_count  ## pass the module path name 
 
 ```
