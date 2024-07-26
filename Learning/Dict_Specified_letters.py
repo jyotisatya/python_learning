@@ -5,7 +5,7 @@ word_meaning = {
     'cat' : ' small domesticated carnivorous mammal with soft fur.' ,
     'dog' : 'a domesticated carnivorous mammal that typically has a long snout.' ,
     'elephant' : 'a large herbivorous mammal with a trunk.' ,
-    'ppiraffe' : 'a tall African mammal with a very long neck.' ,
+    'piraffe' : 'a tall African mammal with a very long neck.' ,
     'house' : 'a building for human habitation, especially one that is lived in by a family or small group of people.'
 
 }
