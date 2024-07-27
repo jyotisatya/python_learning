@@ -13,9 +13,11 @@ word_meaning = {
 # create a blank dictionary that will store the result
 
 dict_word = (word_meaning.items())
-#print(dict_word)
+print(dict_word)
 result_dict={}
 for word , meaning in dict_word:
     if word[0] in ['a', 'd' , 'p']:
       result_dict[word] = meaning
 print( json.dumps(result_dict,indent=2))        
+
+## special test
