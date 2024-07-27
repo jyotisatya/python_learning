@@ -19,3 +19,5 @@ for word , meaning in dict_word:
     if word[0] in ['a', 'd' , 'p']:
       result_dict[word] = meaning
 print( json.dumps(result_dict,indent=2))        
+
+## special test
