@@ -1,3 +1,6 @@
+import json
+
+
 word_meaning_dict = {
     'fruits': {
         'apple': 'A sweet fruit.',
@@ -25,8 +28,19 @@ word_meaning_dict = {
 }
 
 # Print the nested dictionary
-import json
-print(json.dumps(word_meaning_dict, indent=3))
+
+result_t1 = {}
+
+for section, word_meaning in word_meaning_dict.items():
+   result_t1[section.upper()]= len(word_meaning)
+
+print(json.dumps(result_t1, indent=2))   
+
+
+
+
+
+
 
 # make a new dictionary and find the number of words in each section and make each section in upper case
 
@@ -47,7 +61,8 @@ print(json.dumps(word_meaning_dict, indent=3))
     'banana' : 'fruits',
     'cat' : 'animal',
     'elephant' : 'animal',
-    'giraffe' : 'animal'
+    'giraffe' : 'animal',
+    'mountain' : 'places'
  }
 
 '''

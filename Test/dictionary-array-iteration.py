@@ -24,7 +24,7 @@ import json
 # Task 1 find all the words whose meaning contains  between 6-9  words : create new dictionary, 3-8,12-16
 new_dict={}
 dict=word_meaning_dict.items()
-# print(dict)
+print(dict)
 for key , value in dict:
     input_array=value.split()
     
