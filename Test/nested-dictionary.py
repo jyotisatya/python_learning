@@ -20,7 +20,7 @@ word_meaning_dict = {
         'jungle': 'A dense, tropical forest with a rich variety of wildlife and vegetation.'
     },
     'objects': {
-        'ice': 'Frozen water, used to cool drinks and preserve food.',
+        'icae': 'Frozen water, used to cool drinks and preserve food.',
         'kite': 'A lightweight frame covered with material, flown in the wind at the end of a long string.',
         'notebook': 'A book of blank pages for writing notes, recording information, or drawing sketches.',
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
@@ -30,11 +30,19 @@ word_meaning_dict = {
 # Print the nested dictionary
 
 result_t1 = {}
+result_t2={}
+#letters = ['y','z','w','t','q','d','m']
 
 for section, word_meaning in word_meaning_dict.items():
    result_t1[section.upper()]= len(word_meaning)
+   for word , meaning in word_meaning.items():
+      if ('y' in word) or ('p' in word):
+         result_t2[word]=section
+     
+     
 
-print(json.dumps(result_t1, indent=2))   
+
+print(json.dumps(result_t2, indent=2))   
 
 
 
