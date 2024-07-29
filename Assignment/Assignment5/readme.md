@@ -1,5 +1,34 @@
 # Python Class Coding Questions
 
+```python
+
+class ExampleClass:
+    def __init__(this, name):
+        this.name = name
+
+    def greet(this):
+        return f"Hello, {this.name}!"
+
+    def farewell(this):
+        return f"Goodbye, {this.name}!"
+
+def main():
+    # Create an instance of ExampleClass
+    example = ExampleClass("Alice")  # Instantiate the class
+
+    # Use the class methods
+    greeting = example.greet()       # Call the greet method
+    farewell = example.farewell()    # Call the farewell method
+
+    # Print the results
+    print(greeting)
+    print(farewell)
+
+if __name__ == "__main__":
+    main()
+
+```
+
 ## Very Easy Questions
 
 1. **Question:** Create a class called `Car` with an `__init__` method that takes a parameter `make` and assigns it to an instance variable. Then, instantiate an object of this class with the make `"Toyota"` and print the make of the car.
