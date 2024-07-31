@@ -23,17 +23,19 @@ word_meaning_dict = {
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
-# total number of sections. The function should return `4`
+#*Write a function to return the meaning of the word 'cat'
 
-def section_count(word_meaning_dict):
-    return len(word_meaning_dict.keys())
-    # count=0
-    #for word, meaning in word_meaning_dict.items():
-    #     count=count+len(word)
-    #     #return count
-          #print(len(word_meaning_dict.keys))
 
-#total_section= section_count(word_meaning_dict)     
-#print(total_section)   
-section_count(word_meaning_dict)
-print
+
+       
+def find_meaning(word_meaning_dict):
+    for word , meaning in word_meaning_dict.items():
+        # if word in meaning:
+        #     return meaning[word]
+        if 'cat' in meaning:
+            return meaning['cat']      
+
+
+    return('not')
+print(find_meaning(word_meaning_dict)) 
+
