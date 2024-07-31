@@ -36,7 +36,7 @@ word_meaning_dict = {
 
 **Make a function to find if the word contains any of letter in the given list**
     - Using the above nested array  find if the word contains any letter in #letters = ['y','z','w','t','q','d','m'] and make a new dictionary with word and section 
-    ````
+    ```
     {
     'apple' : 'fruits',
     'banana' : 'fruits',
