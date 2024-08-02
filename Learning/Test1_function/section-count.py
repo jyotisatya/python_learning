@@ -1,6 +1,3 @@
-import json
-
-
 word_meaning_dict = {
     'fruits': {
         'apple': 'A sweet fruit.',
@@ -26,43 +23,19 @@ word_meaning_dict = {
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
+# total number of sections. The function should return `4`
 
-# Print the nested dictionary
+# def section_count(word_meaning_dict):
+#     return len(word_meaning_dict)
 
-result_t1 = {}
-result_t2={}
-#letters = ['y','z','w','t','q','d','m']
+# count = section_count(word_meaning_dict)
+# print (count)
 
-for section, word_meaning in word_meaning_dict.items():
-   result_t1[section.upper()]= len(word_meaning)
-   for word , meaning in word_meaning.items():
-      if ('y' in word) or ('p' in word):
-         result_t2[word]=section
-     
+def section_count_loop(dict):
+    count = 0     
+    for section , object in dict.items():
+        count +=1
+    return count
 
-print(json.dumps(result_t2, indent=2))   
-
-# make a new dictionary and find the number of words in each section and make each section in upper case
-
-'''
-{
-    FRUITS: 2,
-    ANIMALS: 5,
-    PLACES: 4
-    OBJECTS: 4
-}
-'''
-
-# Make an dictionary where word contains a letter given 'a' and print the words and value as its section
-
-'''
-{
-    'apple' : 'fruits',
-    'banana' : 'fruits',
-    'cat' : 'animal',
-    'elephant' : 'animal',
-    'giraffe' : 'animal',
-    'mountain' : 'places'
- }
-
-'''
+loop_count = section_count_loop(word_meaning_dict)
+print(loop_count)    

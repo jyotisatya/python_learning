@@ -1,5 +1,3 @@
-import json
-
 
 word_meaning_dict = {
     'fruits': {
@@ -26,43 +24,12 @@ word_meaning_dict = {
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
+# ['apple', 'banana']
+#List all the keys in the 'fruits' section
 
-# Print the nested dictionary
+def key_find(dictionary):
+        for word,meaning in word_meaning_dict.items():
+            if word == 'fruits':
+                print(meaning.keys())
 
-result_t1 = {}
-result_t2={}
-#letters = ['y','z','w','t','q','d','m']
-
-for section, word_meaning in word_meaning_dict.items():
-   result_t1[section.upper()]= len(word_meaning)
-   for word , meaning in word_meaning.items():
-      if ('y' in word) or ('p' in word):
-         result_t2[word]=section
-     
-
-print(json.dumps(result_t2, indent=2))   
-
-# make a new dictionary and find the number of words in each section and make each section in upper case
-
-'''
-{
-    FRUITS: 2,
-    ANIMALS: 5,
-    PLACES: 4
-    OBJECTS: 4
-}
-'''
-
-# Make an dictionary where word contains a letter given 'a' and print the words and value as its section
-
-'''
-{
-    'apple' : 'fruits',
-    'banana' : 'fruits',
-    'cat' : 'animal',
-    'elephant' : 'animal',
-    'giraffe' : 'animal',
-    'mountain' : 'places'
- }
-
-'''
+key_find(word_meaning_dict)                
