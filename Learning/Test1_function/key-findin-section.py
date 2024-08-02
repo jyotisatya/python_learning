@@ -29,7 +29,7 @@ word_meaning_dict = {
 
 def key_find(dictionary):
         for word,meaning in word_meaning_dict.items():
-            if word == 'objects':
+            if word == 'fruits':
                 print(meaning.keys())
 
 key_find(word_meaning_dict)                
