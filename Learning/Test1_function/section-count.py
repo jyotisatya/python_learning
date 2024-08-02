@@ -25,8 +25,17 @@ word_meaning_dict = {
 }
 # total number of sections. The function should return `4`
 
-def section_count(word_meaning_dict):
-    return len(word_meaning_dict)
+# def section_count(word_meaning_dict):
+#     return len(word_meaning_dict)
 
-count = section_count(word_meaning_dict)
-print (count)
+# count = section_count(word_meaning_dict)
+# print (count)
+
+def section_count_loop(dict):
+    count = 0     
+    for section , object in dict.items():
+        count +=1
+    return count
+
+loop_count = section_count_loop(word_meaning_dict)
+print(loop_count)    
