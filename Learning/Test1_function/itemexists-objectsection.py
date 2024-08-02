@@ -1,3 +1,5 @@
+# Write a function to check if 'notebook' exists in the 'objects' section.
+
 
 word_meaning_dict = {
     'fruits': {
@@ -24,12 +26,13 @@ word_meaning_dict = {
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
-# ['apple', 'banana']
-#List all the keys in the 'fruits' section
 
-def key_find(dictionary):
-        for word,meaning in word_meaning_dict.items():
-            if word == 'fruits':
-                print(meaning.keys())
+def find_meaning(word_meaning_dict):
+    for word , meaning in word_meaning_dict.items():
+        #if word in meaning:
+           #return meaning[word]
+        if 'notebook' in word:
+            return True      
 
-key_find(word_meaning_dict)                
+
+find_meaning(word_meaning_dict)
