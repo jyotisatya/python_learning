@@ -1,6 +1,4 @@
-# Write a function to check if 'notebook' exists in the 'objects' section.
-
-
+# data.py
 word_meaning_dict = {
     'fruits': {
         'apple': 'A sweet fruit.',
@@ -20,19 +18,9 @@ word_meaning_dict = {
         'jungle': 'A dense, tropical forest with a rich variety of wildlife and vegetation.'
     },
     'objects': {
-        'icae': 'Frozen water, used to cool drinks and preserve food.',
+        'ice': 'Frozen water, used to cool drinks and preserve food.',
         'kite': 'A lightweight frame covered with material, flown in the wind at the end of a long string.',
         'notebook': 'A book of blank pages for writing notes, recording information, or drawing sketches.',
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
-
-def find_meaning(word_meaning_dict):
-    for word , meaning in word_meaning_dict.items():
-        #if word in meaning:
-           #return meaning[word]
-        if 'notebook' in word:
-            return True      
-
-
-find_meaning(word_meaning_dict)

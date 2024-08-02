@@ -36,4 +36,3 @@ def section_count(word_meaning_dict):
 #total_section= section_count(word_meaning_dict)     
 #print(total_section)   
 section_count(word_meaning_dict)
-print

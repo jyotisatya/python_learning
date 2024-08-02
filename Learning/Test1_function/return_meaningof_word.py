@@ -23,7 +23,7 @@ word_meaning_dict = {
         'pencil': 'A writing instrument with a thin stick of graphite or a similar substance, encased in wood or plastic.'
     }
 }
-#*Write a function to return the meaning of the word 'cat'
+# Write a function to return the meaning of the word 'cat'
 
 
 
