@@ -66,6 +66,65 @@ my_dict = {key1: value1, key2: value2}
   - `values()`: Returns a view object of all the values in the dictionary.
   - `items()`: Returns a view object of all the key-value pairs in the dictionary.
 
+
+## Examples: 
+
+- In sets, string, list, tuples the for loop `for k in {sets,list, str, tuple}
+this is value directly
+
+- and in disc
+ for k in dict -> this k is key and for getting keys dn value both we use dict.items()
+
+
+```python
+
+l1 = ["a", "b", "c", "d", "e"]
+print(type(l1))
+for k in l1:
+    print (k)
+
+
+print("\n----------\n")
+d1 = {
+    "a" : "A VALUE",
+    "b" : "B VALUE",
+    "c" : "C VALUE",
+    "d" : "D VALUE",
+    "e" : "E VALUE"  
+}    
+
+print (type(d1))
+for k in d1:
+    print (k)
+
+
+print("\n----------\n")
+
+lt = ("a", "b", "c", "d", "e")
+print (type(lt))
+for k in lt:
+    print (k)    
+
+
+
+print("\n----------\n")
+ 
+l_set = {"a", "b", "c", "d", "e"}
+print (type (l_set))
+
+for k in l_set:
+    print (k)    
+
+print("\n----------\n")
+
+str = "my_str"
+print(type(str))
+
+for k in str:
+    print(k)
+
+```
+
 ## Practice Questions
 
 ### Easy
