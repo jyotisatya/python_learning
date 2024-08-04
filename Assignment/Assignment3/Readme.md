@@ -37,17 +37,3 @@
     - Count how many words in `word_meaning_dict` have meanings that consist of more than one word.
 
 
-
-nested_disc = {
-
-   'animal' : {
-         'cat' : 'asdsad'
-    }.
-    'bird' : {
-      'imu' : 'asdad'
-    },
-    country : ''
-
-}
-
-

@@ -11,7 +11,7 @@ word_meaning_dict = {
         'dog': 'A loyal domestic animal, often kept as a pet.',
         'elephant': 'A large mammal with a trunk, native to Africa and Asia.',
         'giraffe': 'A tall African mammal with a very long neck and distinctive spots.',
-        'lion': 'A large wild cat known as the king of the jungle, with a mane and powerful build.'
+        'elion': 'A large wild cat known as the king of the jungle, with a mane and powerful build.'
     },
     'places': {
         'house': 'A building where people live, typically a family or group.',
@@ -27,7 +27,7 @@ word_meaning_dict = {
     }
 }
 ```
-
+   
 
 
 ## Questions
@@ -76,6 +76,23 @@ word_meaning_dict = {
 
 7. **Write a function to add a new word 'strawberry' with its meaning 'A sweet red fruit' to the 'fruits' section.**
    - Example: After adding, `word_meaning_dict['fruits']` should include `'strawberry': 'A sweet red fruit'`.
+   -  another question with separate input data:
+   this data will include a nested dictionary of list and dict
+   ```python 
+   user_profile  = {
+        "address" : {
+            "city": "bengaluru",
+            "pincode" : 560100,
+            "state" : "karnataka"
+        },
+        "courses" : [ "python", "javascript", "java"],
+        "name" : "jyoti",
+        "age" : 56,
+        "email" : "js@example.com"
+   }
+   ```
+   CHeck more questions in assignment 4.1
+
 
 8. **Write a function to delete the word 'lion' from the 'animals' section.**
    - Example: After deletion, `word_meaning_dict['animals']` should not include the key `'lion'`.

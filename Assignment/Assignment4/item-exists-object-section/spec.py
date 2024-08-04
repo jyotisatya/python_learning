@@ -1,7 +1,7 @@
 # spec.py
 import unittest
 from index import find_meaning
-from data import word_meaning_dict
+from testdata import word_meaning_dict
 
 class TestFindMeaning(unittest.TestCase):
 
