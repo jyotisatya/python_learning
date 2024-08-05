@@ -41,6 +41,38 @@ print(nested_dict)
 
 ### Assignment Tasks for Beginners
 
+Section 1
+
+Sure, here are the questions and their solutions presented separately:
+
+### Questions
+
+1. Print the value of `"float_value"` from `nested_dict`.
+
+2. Print the value of `"str_value"` from `nested_dict`.
+
+3. Print the value of the third element in the `list_value`.
+
+4. Print the value of `"bool_value"` from `nested_dict`.
+
+5. Print the value of `"name"` for the first dictionary inside the `"nested_list"`.
+
+6. Print the value of `"age"` for the second dictionary inside the `"nested_list"`.
+
+7. Print the value of `"key1"` from the nested dictionary inside `"another_level3"`.
+
+8. Print the value of the first element in the `"simple_list"`.
+
+9. Print the value of `"keyA"` from `"simple_dict"`.
+
+10. Print the value of `"simple_float"` from `nested_dict`.
+
+11. Print the value of `"simple_str"` from `nested_dict`.
+
+
+Section 2
+
+
 1. **Accessing Values:**
    - Print the value of `"int_value"` from `nested_dict`.
    - Print the second element of the `list_value`.
