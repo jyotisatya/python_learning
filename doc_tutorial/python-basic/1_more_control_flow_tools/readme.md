@@ -171,7 +171,7 @@ def fact(n):
 This way, `scope` inside the function will refer to the global variable, and the code will work as intended without throwing an error.
 
 
-## now new code with global scope and order of the print
+## now new code with global` scope and order of the print
 
 ```python
 scope = 5
