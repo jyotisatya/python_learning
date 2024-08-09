@@ -60,6 +60,124 @@ sol = fact(4)
 
 This demonstrates the difference between global and local variable scopes in Python.
 
+# global scope
+
+```python
+scope = 5
+print("1",scope)  # 1st print
+
+def fact(n):
+    global scope;
+    print("2", scope) ## 
+    result = 1
+    scope = 7
+    print("3", scope)  # 2nd print
+    while n > 0:
+        result = n
+        n = n - 1
+        scope = n
+    print("4", scope)  # 3rd print
+    return result
+
+sol = fact(4)
+scope = 78
+print("5", scope)  # 4th print
+
+
+```
+
+Let's break down the code step by step and understand the output for each `print` statement, as well as the role of the `global` keyword in Python.
+
+### Code Breakdown
+
+1. **Initialization:**
+   ```python
+   scope = 5
+   ```
+   - The variable `scope` is initialized with the value `5`.
+
+2. **First Print Statement:**
+   ```python
+   print("1", scope)  # 1st print
+   ```
+   - Output: `"1 5"`
+   - At this point, `scope` is `5`.
+
+3. **Function Definition and Global Keyword:**
+   ```python
+   def fact(n):
+       global scope
+   ```
+   - The `fact` function is defined. Inside the function, the `global scope` statement is used. This means that the function will use the global variable `scope` instead of creating a local variable with the same name.
+
+4. **Second Print Statement Inside the Function:**
+   ```python
+   print("2", scope)  # Inside fact function
+   ```
+   - Output: `"2 5"`
+   - At the start of the `fact` function, `scope` is still `5` since the global `scope` variable is being accessed.
+
+5. **Modifying the Global Variable:**
+   ```python
+   scope = 7
+   print("3", scope)  # Inside fact function
+   ```
+   - Output: `"3 7"`
+   - The global `scope` is now updated to `7`. The print statement reflects this change.
+
+6. **While Loop Execution:**
+   ```python
+   while n > 0:
+       result = n
+       n = n - 1
+       scope = n
+   ```
+   - The loop iterates, decreasing `n` each time and assigning it to `scope`.
+   - The value of `scope` changes as follows:
+     - First iteration: `n = 4`, `scope = 4`
+     - Second iteration: `n = 3`, `scope = 3`
+     - Third iteration: `n = 2`, `scope = 2`
+     - Fourth iteration: `n = 1`, `scope = 1`
+     - Fifth iteration: `n = 0`, `scope = 0`
+
+7. **Third Print Statement Inside the Function:**
+   ```python
+   print("4", scope)  # Inside fact function
+   ```
+   - Output: `"4 0"`
+   - After the loop ends, `scope` has the value `0`.
+
+8. **Returning from the Function:**
+   ```python
+   return result
+   ```
+   - The `fact` function returns `result`, which is `1` (from the last iteration of the loop).
+
+9. **Changing the Global Variable Again:**
+   ```python
+   scope = 78
+   print("5", scope)  # 4th print
+   ```
+   - Output: `"5 78"`
+   - After the function call, `scope` is updated to `78`. The print statement reflects this change.
+
+### Summary of Outputs
+
+- **First Print (Before function call):** `"1 5"`
+- **Second Print (Inside function, before any change):** `"2 5"`
+- **Third Print (Inside function, after first change):** `"3 7"`
+- **Fourth Print (Inside function, after loop):** `"4 0"`
+- **Fifth Print (After function call):** `"5 78"`
+
+### Explanation of `global`
+
+- The `global` keyword in Python is used inside a function to refer to a global variable that exists outside the function. By using `global scope`, you are telling Python that when you refer to `scope` inside the function, it should refer to the global variable `scope` instead of creating a local variable.
+  
+- Any changes made to `scope` inside the function will directly affect the global `scope` variable.
+
+This ensures that the modifications done to `scope` inside the `fact` function persist even after the function execution is complete.
+
+
 # Python Control Flow Summary
 
 The Python control flow tutorial page provides an overview of various control flow statements used in Python, which allow for conditional execution of code and looping over data. This section covers `if` statements, `for` loops, `while` loops, `break`, `continue`, and the `pass` statement, as well as the `match` statement introduced in Python 3.10.
