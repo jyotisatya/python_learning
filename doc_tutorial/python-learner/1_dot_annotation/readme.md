@@ -1,4 +1,3 @@
-Here's a detailed tutorial on accessing dictionary keys in Python, including the use of dot notation and some practice assignments:
 
 ---
 

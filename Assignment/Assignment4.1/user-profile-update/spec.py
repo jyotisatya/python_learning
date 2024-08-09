@@ -1,7 +1,8 @@
-import json
+import unittest
 from index import user_update 
 from data import user_profile
-import unittest
+
+
 class TestFindMeaning(unittest.TestCase):
 
     def test_old_city_value_not_exists(self):

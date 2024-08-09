@@ -1,5 +1,64 @@
 
 ---
+# Variable and Scope
+
+Here's a breakdown of the code and the expected output for each `print` statement:
+
+### Code Analysis
+
+```python
+scope = 5
+print(scope)  # 1st print
+
+def fact(n):
+    result = 1
+    scope = 7
+    print(scope)  # 2nd print
+    while n > 0:
+        result = n
+        n = n - 1
+        scope = n
+    print(scope)  # 3rd print
+    return result
+
+scope = 78
+print(scope)  # 4th print
+sol = fact(4)
+```
+
+### Output and Explanation
+
+1. **First `print(scope)` (outside the function):**
+   - **Output:** `5`
+   - **Reason:** The variable `scope` is first assigned the value `5`. The first `print(scope)` will output this value.
+
+2. **Second `print(scope)` (inside the `fact` function):**
+   - **Output:** `7`
+   - **Reason:** Inside the `fact` function, a new local variable `scope` is assigned the value `7`. The `print(scope)` inside the function will output this local variable value, which is `7`. This local variable `scope` does not affect the global `scope` defined outside the function.
+
+3. **Third `print(scope)` (inside the `fact` function, after the `while` loop):**
+   - **Output:** `0`
+   - **Reason:** The `while` loop continues as long as `n > 0`. Inside the loop, `n` is decremented by `1` each time, and `scope` is updated to `n`. After the loop ends (when `n` becomes `0`), the `print(scope)` will output `0`, which is the value of `n` when the loop terminates.
+
+4. **Fourth `print(scope)` (outside the function after reassigning):**
+   - **Output:** `78`
+   - **Reason:** After the `fact` function is defined, the global `scope` variable is reassigned to `78`. The last `print(scope)` will output the value of this global variable, which is now `78`.
+
+### Summary of Output:
+
+1. `5`
+2. `7`
+3. `0`
+4. `78`
+
+### Detailed Explanation:
+
+- The first `print` statement outputs `5` because it refers to the global `scope` variable initially set to `5`.
+- Inside the `fact` function, a local variable named `scope` is defined and assigned `7`. This is why the second `print` outputs `7`.
+- As the loop in the `fact` function modifies `n`, it also updates the local `scope` variable to the current value of `n`. When `n` reaches `0`, the loop ends, and the third `print` outputs `0`.
+- Finally, after calling the `fact` function, the global `scope` variable is set to `78`, and the fourth `print` reflects this new value, outputting `78`.
+
+This demonstrates the difference between global and local variable scopes in Python.
 
 # Python Control Flow Summary
 
