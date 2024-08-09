@@ -62,6 +62,117 @@ This demonstrates the difference between global and local variable scopes in Pyt
 
 # global scope
 
+
+In above code we are adding one more print inside the method
+
+```python
+scope = 5
+print("1",scope)  # 1st print
+
+def fact(n):
+    scope;
+    print("2", scope) ## 
+    result = 1
+    scope = 7
+    print("3", scope)  # 2nd print
+    while n > 0:
+        result = n
+        n = n - 1
+        scope = n
+    print("4", scope)  # 3rd print
+    return result
+
+
+scope = 78
+print("5", scope)  # 4th print
+sol = fact(4)
+```
+
+now this function will throw error:
+
+```
+1 5
+5 78
+Traceback (most recent call last):
+  File "/home/runner/Python/main.py", line 27, in <module>
+    sol = fact(4)
+  File "/home/runner/Python/main.py", line 12, in fact
+    scope;
+UnboundLocalError: local variable 'scope' referenced before assignment
+```
+
+Yes, the code will throw an error. Let's analyze why this happens.
+
+### Code Breakdown
+
+1. **Initialization:**
+   ```python
+   scope = 5
+   print("1", scope)  # 1st print
+   ```
+   - The variable `scope` is initialized with the value `5`.
+   - Output: `"1 5"`
+
+2. **Function Definition:**
+   ```python
+   def fact(n):
+       scope;
+       print("2", scope)  # 2nd print
+       result = 1
+       scope = 7
+       print("3", scope)  # 3rd print
+       while n > 0:
+           result = n
+           n = n - 1
+           scope = n
+       print("4", scope)  # 4th print
+       return result
+   ```
+   - Here, the function `fact` is defined. Notice that `scope` is referenced directly without the `global` keyword.
+   - Inside the function, when you do `scope;`, it doesn't do anything meaningful. It just references the variable `scope`.
+
+3. **Scope Referencing Without Global Keyword:**
+   - When the function tries to execute `print("2", scope)`, it attempts to access the `scope` variable. However, since `scope` is assigned a new value within the function (`scope = 7`), Python assumes `scope` to be a local variable.
+
+4. **Error Generation:**
+   - The problem arises because the local variable `scope` is used before it is assigned a value within the function. This leads to an `UnboundLocalError`.
+   - Specifically, Python raises an error because it expects that `scope` should have been assigned a value before it is used in the print statement.
+
+   The error message would look something like this:
+   ```
+   UnboundLocalError: local variable 'scope' referenced before assignment
+   ```
+
+### Explanation of Error
+
+- In Python, if you assign a value to a variable inside a function, that variable is treated as a local variable within that function's scope.
+- Since `scope = 7` is present inside the function, `scope` is treated as a local variable.
+- When you try to access `scope` with `print("2", scope)` before the assignment `scope = 7`, Python realizes that `scope` is a local variable but hasn't been assigned a value yet, leading to an `UnboundLocalError`.
+
+### Solution
+
+To fix this, if you want to use the global `scope` variable inside the function, you should declare it using the `global` keyword:
+
+```python
+def fact(n):
+    global scope
+    print("2", scope)  # Now it will use the global `scope`
+    result = 1
+    scope = 7
+    print("3", scope)
+    while n > 0:
+        result = n
+        n = n - 1
+        scope = n
+    print("4", scope)
+    return result
+```
+
+This way, `scope` inside the function will refer to the global variable, and the code will work as intended without throwing an error.
+
+
+## now new code with global scope and order of the print
+
 ```python
 scope = 5
 print("1",scope)  # 1st print
@@ -176,6 +287,7 @@ Let's break down the code step by step and understand the output for each `print
 - Any changes made to `scope` inside the function will directly affect the global `scope` variable.
 
 This ensures that the modifications done to `scope` inside the `fact` function persist even after the function execution is complete.
+
 
 
 # Python Control Flow Summary
